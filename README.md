@@ -1,8 +1,9 @@
 SpringBoard and Dock Plugins API
 ==============
-_
+
 Use ScrollingBoard Library to add Plugin pages on SpringBoard and the Dock
-_
+--------------------------------------------------------------------------
+_____
 
 by Elias Limneos
 
