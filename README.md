@@ -36,7 +36,7 @@ Plugins for SpringBoard and Dock are found in /Library/ScrollingBoardPlugins/Spr
 Example
 -------
 
-So for example , to add a Dock plugin which you may call MyCoolDockPlugin , you need to create a library (the tweak) and place an Info.plist in the directory 
+So for example , to add a Dock plugin which you may call MyCoolDockPlugin , you need to create a library (the tweak) and place that and an Info.plist in the directory 
 
 /Library/ScrollingBoardPlugins/DockPlugins/MyCoolDockPlugin.bundle
 
