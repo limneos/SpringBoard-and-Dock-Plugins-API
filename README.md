@@ -44,7 +44,7 @@ The structure of the bundle should consist of :
 
 A) A property list file called Info.plist with the following structure:
 --
-	-<?xml version="1.0" encoding="UTF-8"?>
+	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
 	<dict>
@@ -71,7 +71,7 @@ A) A property list file called Info.plist with the following structure:
         <key>NSPrincipalClass</key>
         <string>MyCoolDockPluginObject</string>
 	</dict>
-	</plist>-
+	</plist>
 B) A compiled library that implements a class named MyCoolDockPluginObject as defined in the Info.plist 's NSPrincipalClass property.
 --
 
@@ -80,7 +80,7 @@ The class MyCoolDockPluginObject should respond to selector -(id)view (required)
 This is the only essential requirement for your plugin to work. 
 
 
-	-@interface MyCoolDockPluginObject : NSObject
+	@interface MyCoolDockPluginObject : NSObject
 	@property (nonatomic,retain) UIView *myView;
 	@end
 
@@ -99,8 +99,7 @@ This is the only essential requirement for your plugin to work.
 	
 	return myView;
 	}
-	@end-
-
+	@end
 
 When the PluginManager initalizes, it loads all bundles from the plugins directory and instantiates the PrincipalClass objects with the -(id)init method.
 The view that is added to the dock or springboard is what YOU return in your object's method -(id)view.
@@ -114,10 +113,10 @@ Optional Methods
 ----------------
 If you implement any of these 4 methods , it will be called when the dock scrolls to your view or leaves your view, respectively.
 
-  -(void)viewDidBecomeVisible; // Your view appeared on the dock's scrollview, or better, user just scrolled ON your view.
-  -(void)viewWillLoseFocus; // Your view will start moving away of the dock's focus, or better, user just started scrolling AWAY from your view.
-  -(void)viewDidLoseFocus; // Your view lost focus , or better , user scrolled AWAY from your view and ended in another view .
-  -(BOOL)requiresKeyboard; // Required if you need user input. If you implement this method and return YES, PluginManager will enable the SpringBoard's keyboard. (SpringBoard plugins only) 
+-(void)viewDidBecomeVisible; // Your view appeared on the dock's scrollview, or better, user just scrolled ON your view.
+	-(void)viewWillLoseFocus; // Your view will start moving away of the dock's focus, or better, user just started scrolling AWAY from your view.
+	-(void)viewDidLoseFocus; // Your view lost focus , or better , user scrolled AWAY from your view and ended in another view .
+	-(BOOL)requiresKeyboard; // Required if you need user input. If you implement this method and return YES, PluginManager will enable the SpringBoard's keyboard. (SpringBoard plugins only) 
 
 
 
