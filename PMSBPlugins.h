@@ -9,7 +9,7 @@
 
 
 @interface PMSBPlugins : NSObject 
-+(id)sharedInstance;
--(void)scrollToPluginNamed:(id)pluginNamed;
++(PMSBPlugins *)sharedInstance;
+-(void)scrollToPluginNamed:(NSString *)pluginName;
 @end
 
