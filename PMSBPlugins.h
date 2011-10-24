@@ -10,8 +10,6 @@
 
 @interface PMSBPlugins : NSObject 
 +(id)sharedInstance;
--(id)pluginForPage:(int)page;
--(id)pluginNamed:(id)named;
 -(void)scrollToPluginNamed:(id)pluginNamed;
 @end
 
