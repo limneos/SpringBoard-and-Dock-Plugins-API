@@ -80,14 +80,13 @@ The class MyCoolDockPluginObject should respond to selector -(id)view (required)
 The above is the only requirement for your plugin to work. 
 
 
+	@interface MyCoolDockPluginObject : NSObject
+	@property (nonatomic,retain) UIView *myView;
+	@end
 
-@interface MyCoolDockPluginObject : NSObject
-@property (nonatomic,retain) UIView *myView;
-@end
-
-@implementation MyCoolDockPluginObject
-@synthesize myView;
--(id)view{
+	@implementation MyCoolDockPluginObject
+	@synthesize myView;
+	-(id)view{
 
 	if (!self.myView){
 	
@@ -107,9 +106,8 @@ The above is the only requirement for your plugin to work.
 	}
 	
 	return myView;
-}
-@end
-
+	}
+	@end
 
 
 When the PluginManager initalizes, it loads all bundles from the plugins directory and instantiates the PrincipalClass objects with the -(id)init method.
