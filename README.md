@@ -1,7 +1,8 @@
 SpringBoard and Dock Plugins API
 ==============
+_
 Use ScrollingBoard Library to add Plugin pages on SpringBoard and the Dock
---------------------------------------------------------------------------
+_
 
 by Elias Limneos
 
@@ -10,9 +11,10 @@ web: limneos.net
 email: iphone (at) limneos (dot) net
 
 twitter: @limneos
+_____
 
 Intro
-_____
+-----
 
 ScrollingBoard is a tweak that allows dock scrolling, dock unlimited icons, dock addon pages, folders scrolling, folders unlimited icons 
 and as of 21-3-2011 , SpringBoard and Dock plugin pages (PluginManager).
