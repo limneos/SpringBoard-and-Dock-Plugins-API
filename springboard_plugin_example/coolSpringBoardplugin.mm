@@ -1,6 +1,6 @@
 #import <QuartzCore/CALayer.h>
 
-@protocol PluginManagerProtocol <NSObject>
+@protocol PluginClientProtocol <NSObject>
 @required
 -(id)view;
 @optional
@@ -10,7 +10,7 @@
 -(BOOL)requiresKeyboard;
 @end
 
-@interface coolSpringBoardpluginSBPlugin: NSObject <PluginManagerProtocol>
+@interface coolSpringBoardpluginSBPlugin: NSObject <PluginClientProtocol>
 @property (nonatomic,retain) UIView *myView;
 -(id)view;
 @end
