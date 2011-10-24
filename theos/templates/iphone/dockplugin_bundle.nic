@@ -34,7 +34,7 @@ file 28 Resources/Info.plist
 file 45 @@PROJECTNAME@@.mm
 #import <QuartzCore/CALayer.h>
 
-@protocol PluginManagerProtocol <NSObject>
+@protocol PluginClientProtocol <NSObject>
 @required
 -(id)view;
 @optional
@@ -44,7 +44,7 @@ file 45 @@PROJECTNAME@@.mm
 -(BOOL)requiresKeyboard;
 @end
 
-@interface @@PROJECTNAME@@DockPlugin: NSObject <PluginManagerProtocol>
+@interface @@PROJECTNAME@@DockPlugin: NSObject <PluginClientProtocol>
 @property (nonatomic,retain) UIView *myView;
 -(id)view;
 @end

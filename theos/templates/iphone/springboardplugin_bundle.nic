@@ -34,7 +34,7 @@ file 28 Resources/Info.plist
 file 45 @@PROJECTNAME@@.mm
 #import <QuartzCore/CALayer.h>
 
-@protocol PluginManagerProtocol <NSObject>
+@protocol PluginClientProtocol <NSObject>
 @required
 -(id)view;
 @optional
@@ -45,7 +45,7 @@ file 45 @@PROJECTNAME@@.mm
 @end
 
 
-@interface @@PROJECTNAME@@SBPlugin: NSObject <PluginManagerProtocol>
+@interface @@PROJECTNAME@@SBPlugin: NSObject <PluginClientProtocol>
 @property (nonatomic,retain) UIView *myView;
 -(id)view;
 @end
