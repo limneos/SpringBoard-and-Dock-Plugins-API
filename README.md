@@ -22,7 +22,7 @@ and as of 21-3-2011 , SpringBoard and Dock plugin pages (PluginManager).
 
 
 Note: The SpringBoard and Dock Plugins library (PluginManager) will soon be an independent package and it will not require ScrollingBoard.
-------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Instructions:
 -------------
@@ -45,10 +45,10 @@ The structure of the bundle should consist of :
 A) A property list file called Info.plist with the following structure:
 --
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+ <plist version="1.0">
+ <dict>
         <key>CFBundleDevelopmentRegion</key>
         <string>English</string>
         <key>CFBundleExecutable</key>
@@ -71,8 +71,8 @@ A) A property list file called Info.plist with the following structure:
         <string>3.0</string>
         <key>NSPrincipalClass</key>
         <string>MyCoolDockPluginObject</string>
-</dict>
-</plist>
+ </dict>
+ </plist>
 
 B) A compiled library that implements a class named MyCoolDockPluginObject as defined in the Info.plist 's NSPrincipalClass property.
 --
