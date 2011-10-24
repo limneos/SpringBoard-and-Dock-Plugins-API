@@ -77,7 +77,7 @@ B) A compiled library that implements a class named MyCoolDockPluginObject as de
 
 The class MyCoolDockPluginObject should respond to selector -(id)view (required). 
 
-The above is the only requirement for your plugin to work. 
+This is the only essential requirement for your plugin to work. 
 
 
 	@interface MyCoolDockPluginObject : NSObject
