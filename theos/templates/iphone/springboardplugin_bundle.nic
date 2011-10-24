@@ -31,10 +31,21 @@ file 28 Resources/Info.plist
 </dict>
 </plist>
 
-file 33 @@PROJECTNAME@@.mm
+file 45 @@PROJECTNAME@@.mm
 #import <QuartzCore/CALayer.h>
 
-@interface @@PROJECTNAME@@SBPlugin: NSObject 
+@protocol PluginManagerProtocol <NSObject>
+@required
+-(id)view;
+@optional
+-(void)viewDidBecomeVisible;
+-(void)viewWillLoseFocus;
+-(void)viewDidLoseFocus;
+-(BOOL)requiresKeyboard;
+@end
+
+
+@interface @@PROJECTNAME@@SBPlugin: NSObject <PluginManagerProtocol>
 @property (nonatomic,retain) UIView *myView;
 -(id)view;
 @end
