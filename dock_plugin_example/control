@@ -1,0 +1,9 @@
+Package: cooldockplugin
+Name: Cool Dock Plugin
+Depends: mobilesubstrate
+Version: 0.1
+Architecture: iphoneos-arm
+Description: An awesome Dock Plugin!
+Maintainer: System Administrator
+Author: System Administrator
+Section: Tweaks
