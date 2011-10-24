@@ -1,10 +1,10 @@
 SpringBoard and Dock Plugins API
 ==============
 Use ScrollingBoard Library to add Plugin pages on SpringBoard and the Dock
--------------------------------
+--------------------------------------------------------------------------
 
 by Elias Limneos
-----------------
+
 web: limneos.net
 
 email: iphone (at) limneos (dot) net
