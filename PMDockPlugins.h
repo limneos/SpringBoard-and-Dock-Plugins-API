@@ -9,23 +9,8 @@
 
 @class NSMutableArray;
 
-@interface PMDockPlugins : NSObject {
-	NSMutableArray* cachedPlugins;
-	NSMutableArray* loadedPlugins;
-}
-@property(retain) NSMutableArray* loadedPlugins;
-@property(retain) NSMutableArray* cachedPlugins;
+@interface PMDockPlugins : NSObject 4
 +(id)sharedInstance;
-+(id)pluginNamesInDictionary:(id)dictionary;
--(id)init;
--(BOOL)insertPluginNamed:(id)named withView:(id)view force:(BOOL)force;
--(BOOL)insertPluginFromBundle:(id)bundle force:(BOOL)force;
--(BOOL)insertPluginNamed:(id)named withView:(id)view andBundle:(id)bundle force:(BOOL)force;
--(BOOL)insertPluginNamed:(id)named withView:(id)view;
--(id)pluginNamed:(id)named;
 -(id)enabledPlugins;
--(BOOL)addAllPluginViewsToDockScrollView;
--(BOOL)removeAllPluginViewsFromDockScrollView;
--(BOOL)removePluginNamed:(id)named;
 @end
 

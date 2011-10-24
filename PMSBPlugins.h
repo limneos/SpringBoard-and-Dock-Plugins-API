@@ -7,32 +7,9 @@
 
 #import <Foundation/NSObject.h>
 
-@class NSMutableArray, SBIconScrollView;
 
-@interface PMSBPlugins : NSObject {
-	SBIconScrollView* iconScrollView;
-	NSMutableArray* keyboardPluginsArr;
-	NSMutableArray* copiedPlugins;
-	NSMutableArray* cachedPlugins;
-	NSMutableArray* loadedPlugins;
-}
-@property(retain, nonatomic) NSMutableArray* loadedPlugins;
-@property(retain, nonatomic) NSMutableArray* cachedPlugins;
-@property(retain, nonatomic) NSMutableArray* copiedPlugins;
-@property(retain, nonatomic) NSMutableArray* keyboardPluginsArr;
-@property(retain, nonatomic) SBIconScrollView* iconScrollView;
+@interface PMSBPlugins : NSObject 
 +(id)sharedInstance;
--(id)init;
--(id)pluginForPage:(int)page;
--(id)pluginNamed:(id)named;
--(int)pageWithPluginNamed:(id)pluginNamed;
 -(void)scrollToPluginNamed:(id)pluginNamed;
--(void)removeAllPluginViewsFromSpringBoardScrollView;
--(void)addAllPluginViewsToSpringBoardScrollView;
--(BOOL)removePluginNamed:(id)named;
--(BOOL)insertPluginFromBundle:(id)bundle force:(BOOL)force;
--(BOOL)insertPluginNamed:(id)named withView:(id)view requiresKeyboard:(BOOL)keyboard force:(BOOL)force;
--(BOOL)insertPluginNamed:(id)named withView:(id)view andBundle:(id)bundle requiresKeyboard:(BOOL)keyboard force:(BOOL)force;
--(BOOL)insertPluginNamed:(id)named withView:(id)view force:(BOOL)force;
 @end
 
