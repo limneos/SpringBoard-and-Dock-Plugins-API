@@ -7,7 +7,6 @@
 
 #import <Foundation/NSObject.h>
 
-@class NSMutableArray, SBIconScrollView;
 
 @interface PMSBPlugins : NSObject 
 +(id)sharedInstance;
