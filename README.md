@@ -1,8 +1,8 @@
 SpringBoard and Dock Plugins API
 ==============
 
-Use ScrollingBoard Library to add Plugin pages on SpringBoard and the Dock
---------------------------------------------------------------------------
+Add Plugin pages or WeeApps on SpringBoard and the Dock
+-------------------------------------------------------
 _____
 
 by Elias Limneos
@@ -18,7 +18,7 @@ Intro
 -----
 
 ScrollingBoard is a tweak that allows dock scrolling, dock unlimited icons, dock addon pages, folders scrolling, folders unlimited icons 
-and as of 21-3-2011 , SpringBoard and Dock plugin pages (PluginManager).
+and as of 21-3-2011 , SpringBoard and Dock plugin pages (or WeeApps).
 
 
 Note: The SpringBoard and Dock Plugins library (PluginManager) will soon be an independent package and it will not require ScrollingBoard.
@@ -28,6 +28,8 @@ Instructions:
 -------------
 
 Before you begin, note that you can find 2 nic templates for Theos in this repository. You can use them to quickly create dock or springboard plugins.
+
+For those familiar with WeeApp plugins (Notification Center plugins), SpringBoard and Dock plugins are the same plugins exactly.
 
 Plugins are bundles , consisting of the bundle library, an Info.plist with the bundle's info and any other images or files you may wish to include.
 
@@ -48,12 +50,14 @@ A) A property list file called Info.plist with the following structure:
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
 	<dict>
-		<key>CFBundleDevelopmentRegion</key>
+	<key>CFBundleDevelopmentRegion</key>
         <string>English</string>
         <key>CFBundleExecutable</key>
         <string>MyCoolDockPlugin</string>
         <key>CFBundleIdentifier</key>
-        <string>My Cool Plugin</string>
+        <string>MyCoolPlugin</string>
+        <key>CFBundleDisplayName</key>
+        <string>MyCoolPlugin</string>
         <key>CFBundleInfoDictionaryVersion</key>
         <string>6.0</string>
         <key>CFBundlePackageType</key>
@@ -75,12 +79,12 @@ A) A property list file called Info.plist with the following structure:
 B) A compiled library that implements a class named MyCoolDockPluginObject as defined in the Info.plist 's NSPrincipalClass property.
 --
 
-The class MyCoolDockPluginObject should conform to protocol PluginClientProtocol and therefore it /must/ respond to selector -(id)view . 
+The class MyCoolDockPluginObject should conform to protocol BBWeeAppController and  PluginClientProtocol and therefore it /must/ respond to selector -(id)view . 
 
 This is the only essential requirement for your plugin to work. 
 
 
-	@interface MyCoolDockPluginObject : NSObject <PluginClientProtocol>
+	@interface MyCoolDockPluginObject : NSObject <BBWeeAppController , PluginClientProtocol>
 	@property (nonatomic,retain) UIView *myView;
 	@end
 
@@ -113,12 +117,12 @@ Optional Methods
 ----------------
 If you implement any of these 4 methods , it will be called when the dock scrolls to your view or leaves your view, respectively.
 
-          -(void)viewDidBecomeVisible; // Your view appeared on the dock's scrollview, or better, user just scrolled ON your view.
+         -(void)viewDidBecomeVisible; // Your view appeared on the dock's scrollview, or better, user just scrolled ON your view.
 	-(void)viewWillLoseFocus; // Your view will start moving away of the dock's focus, or better, user just started scrolling AWAY from your view.
 	-(void)viewDidLoseFocus; // Your view lost focus , or better , user scrolled AWAY from your view and ended in another view .
 	-(BOOL)requiresKeyboard; // Required if you need user input. If you implement this method and return YES, PluginManager will enable the SpringBoard's keyboard. (SpringBoard plugins only) 
 
-
+You can also implement any of the BBWeeAppController optional methods.
 
 Cycript - Quick Test
 --------------------
