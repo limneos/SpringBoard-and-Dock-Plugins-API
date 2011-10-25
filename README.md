@@ -41,6 +41,8 @@ Optionally, you can implement some optinal methods (PluginClientProtocol) to han
 
 Plugins for SpringBoard and Dock are found in /Library/ScrollingBoardPlugins/SpringBoardPlugins and /Library/ScrollingBoardPlugins/DockPlugins respectively.
 
+The plugin controller will also load WeeApps from /System/Library/WeeAppPlugins/ if they are enabled in settings.
+
 Example
 -------
 
