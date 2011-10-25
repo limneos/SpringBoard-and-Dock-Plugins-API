@@ -5,12 +5,12 @@
  * Source: /Library/MobileSubstrate/DynamicLibraries/ScrollingBoard.dylib
  */
 
-#import <Foundation/NSObject.h>
-
-@class NSMutableArray;
 
 @interface PMDockPlugins : NSObject 
-+(id)sharedInstance;
++(PMDockPlugins *)sharedInstance;
+-(NSString *)pluginForPage:(int)page;
+-(NSString *)pluginOnCurrentPage;
 -(void)scrollToPluginNamed:(NSString *)named;
+-(void)scrollToPluginNamed:(NSString *)named animated:(BOOL)animated;
 @end
 
