@@ -11,5 +11,6 @@
 
 @interface PMDockPlugins : NSObject 
 +(id)sharedInstance;
+-(void)scrollToPluginNamed:(NSString *)named;
 @end
 
