@@ -120,7 +120,7 @@ Optional Methods
 ----------------
 If you implement any of these 4 methods , it will be called when the dock scrolls to your view or leaves your view, respectively.
 
-         -(void)viewDidBecomeVisible; // Your view appeared on the dock's scrollview, or better, user just scrolled ON your view.
+	-(void)viewDidBecomeVisible; // Your view appeared on the dock's scrollview, or better, user just scrolled ON your view.
 	-(void)viewWillLoseFocus; // Your view will start moving away of the dock's focus, or better, user just started scrolling AWAY from your view.
 	-(void)viewDidLoseFocus; // Your view lost focus , or better , user scrolled AWAY from your view and ended in another view .
 	-(BOOL)requiresKeyboard; // Required if you need user input. If you implement this method and return YES, PluginManager will enable the SpringBoard's keyboard. (SpringBoard plugins only) 
@@ -141,10 +141,12 @@ If you need to quickly test a plugin with cycript without creating a bundle:
 	cy# [[PMDockPlugins sharedInstance] insertPluginNamed:@"MyCoolPlugin" withView:view force:YES];
 	
 	Or with an already made bundle: 
+	
 	cy# myBundle=[NSBundle bundleWithPath:@"/path/to/the/bundle"];
 	cy# [[PMDockPlugins sharedInstance] insertPluginFromBundle:myBundle force:YES];
 	
-	
+Note that PMSBPlugins and PMDockPlugins -insertPluginFromBundle:force: are private methods and you shouldn't use them
+except for testing while you develop.
 	
 Settings
 --------
