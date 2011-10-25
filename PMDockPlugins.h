@@ -4,8 +4,8 @@
 
 @interface PMDockPlugins : NSObject 
 +(PMDockPlugins *)sharedInstance;
--(NSString *)pluginForPage:(int)page;
 -(NSString *)pluginOnCurrentPage;
+-(NSString *)pluginNameOnPage:(int)page
 -(void)scrollToPluginNamed:(NSString *)named;
 -(void)scrollToPluginNamed:(NSString *)named animated:(BOOL)animated;
 @end
