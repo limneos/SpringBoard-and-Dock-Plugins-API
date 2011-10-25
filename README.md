@@ -74,7 +74,7 @@ A) A property list file called Info.plist with the following structure:
         <key>DTPlatformName</key>
         <string>iphoneos</string>
         <key>MinimumOSVersion</key>
-        <string>3.0</string>
+        <string>4.0</string>
         <key>NSPrincipalClass</key>
         <string>MyCoolDockPluginObject</string>
 	</dict>
