@@ -183,11 +183,13 @@ Permanent Thanks to:
 
  Optimo for being my mentor
 
+ rpetrich for his valuable knowledge and guidance on doing the right thing.
+ 
  DHowett for Theos/Logos and all the background work he's done for the community
 
  Saurik for cycript and everything else
  
  Many other developers from IRC from which I've learned a lot, including
- rpetrich, BigBoss, DB42, kennytm, chpwn, mringwal, TheZimm, Yllier
+ BigBoss, DB42, kennytm, chpwn, mringwal, TheZimm, Yllier
 
 
