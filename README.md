@@ -31,10 +31,10 @@ Before you begin, note that you can find 2 nic templates for Theos in this repos
 
 For those familiar with WeeApp plugins (Notification Center plugins), SpringBoard and Dock plugins are the same plugins exactly.
 
-This means that you can even copy-paste the directory of your WeeApp.bundle to /Library/ScrollingBoardPlugins/DockPlugins 
-or SpringBoardPugins and it will work out of the box.
+This means that you can even copy-paste the directory of your existing WeeApp.bundle to /Library/ScrollingBoardPlugins/DockPlugins 
+or SpringBoardPugins and it will work out of the box. (When you enable it from Settings)
 
-Plugins are bundles , consisting of the bundle library, an Info.plist with the bundle's info and any other images or files you may wish to include.
+Plugins are actually WeeApp bundles , consisting of the bundle library, an Info.plist with the bundle's info and any other images or files you may wish to include.
 
 Plugins for SpringBoard and Dock are found in /Library/ScrollingBoardPlugins/SpringBoardPlugins and /Library/ScrollingBoardPlugins/DockPlugins respectively.
 
@@ -151,7 +151,7 @@ except for testing while you develop.
 Settings
 --------
 
-You can enable/disable SpringBoard and Dock plugins and change their appearing order from within ScrollingBoard's settings.
+You can enable/disable SpringBoard and Dock plugins or existing WeeApps and change their appearing order from within ScrollingBoard's settings.
 
 
 TroubleShooting
