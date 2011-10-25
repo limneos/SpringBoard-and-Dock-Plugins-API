@@ -1,9 +1,0 @@
-Package: com.yourcompany.coolspringboardplugin
-Name: cool SpringBoard plugin
-Depends: mobilesubstrate
-Version: 0.1
-Architecture: iphoneos-arm
-Description: An awesome SpringBoard Plugin!
-Maintainer: Package Name [com.yourcompany.c
-Author: Package Name [com.yourcompany.c
-Section: Tweaks
