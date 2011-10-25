@@ -30,6 +30,8 @@ Instructions:
 Before you begin, note that you can find 2 nic templates for Theos in this repository. You can use them to quickly create dock or springboard plugins.
 
 For those familiar with WeeApp plugins (Notification Center plugins), SpringBoard and Dock plugins are the same plugins exactly.
+This means that you can even copy-paste the directory of your WeeApp.bundle to /Library/ScrollingBoardPlugins/DockPlugins 
+or SpringBoardPugins and it will work out of the box.
 
 Plugins are bundles , consisting of the bundle library, an Info.plist with the bundle's info and any other images or files you may wish to include.
 
