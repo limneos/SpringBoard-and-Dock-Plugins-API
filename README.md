@@ -35,7 +35,7 @@ This means that you can even copy-paste the directory of your existing WeeApp.bu
 or SpringBoardPugins and it will work out of the box. (When you enable it from Settings)
 
 Plugins are actually WeeApp bundles , consisting of the bundle library, an Info.plist with the bundle's info and any other images or files you may wish to include.
-Optionally, you can implement some optinal methods to handle your plugins appearance state in the scrollview.
+Optionally, you can implement some optinal methods (PluginClientProtocol) to handle your plugins appearance state in the scrollview.
 
 Plugins for SpringBoard and Dock are found in /Library/ScrollingBoardPlugins/SpringBoardPlugins and /Library/ScrollingBoardPlugins/DockPlugins respectively.
 
