@@ -108,7 +108,7 @@ This is the only essential requirement for your plugin to work.
 	}
 	@end
 
-When the PluginManager initalizes, it loads all bundles from the plugins directory and instantiates the PrincipalClass objects with the -(id)init method.
+When the PluginManager initalizes, it loads all bundles from the plugins directory (or WeeApps directory) and instantiates the PrincipalClass objects with the -(id)init method.
 The view that is added to the dock or springboard is what YOU return in your object's method -(id)view.
 
 This view is autoresized to fit the dock or springboard, so I suggest you consider it as a wrapper view and leave it alone, and add subviews inside it to work with.
@@ -125,7 +125,7 @@ If you implement any of these 4 methods , it will be called when the dock scroll
 	-(void)viewDidLoseFocus; // Your view lost focus , or better , user scrolled AWAY from your view and ended in another view .
 	-(BOOL)requiresKeyboard; // Required if you need user input. If you implement this method and return YES, PluginManager will enable the SpringBoard's keyboard. (SpringBoard plugins only) 
 
-You can also implement any of the BBWeeAppController optional methods.
+You can also implement any of the BBWeeAppController optional methods and my controller will respond accordignly.
 
 Cycript - Quick Test
 --------------------
