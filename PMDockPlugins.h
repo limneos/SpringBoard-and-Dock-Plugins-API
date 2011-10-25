@@ -9,8 +9,7 @@
 
 @class NSMutableArray;
 
-@interface PMDockPlugins : NSObject 4
+@interface PMDockPlugins : NSObject 
 +(id)sharedInstance;
--(id)enabledPlugins;
 @end
 

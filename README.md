@@ -75,12 +75,12 @@ A) A property list file called Info.plist with the following structure:
 B) A compiled library that implements a class named MyCoolDockPluginObject as defined in the Info.plist 's NSPrincipalClass property.
 --
 
-The class MyCoolDockPluginObject should respond to selector -(id)view (required). 
+The class MyCoolDockPluginObject should conform to protocol PluginClientProtocol and therefore it /must/ respond to selector -(id)view . 
 
 This is the only essential requirement for your plugin to work. 
 
 
-	@interface MyCoolDockPluginObject : NSObject
+	@interface MyCoolDockPluginObject : NSObject <PluginClientProtocol>
 	@property (nonatomic,retain) UIView *myView;
 	@end
 
