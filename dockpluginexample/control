@@ -1,0 +1,9 @@
+Package: com.yourcompany.dockpluginexample
+Name: DockPluginExample
+Depends: firmware (>= 4.0), com.saurik.substrate.safemode
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome dock plugin for ScrollingBoard!
+Maintainer: System Administrator
+Author: System Administrator
+Section: Tweaks
