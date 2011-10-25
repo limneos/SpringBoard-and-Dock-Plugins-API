@@ -20,6 +20,8 @@ Intro
 ScrollingBoard is a tweak that allows dock scrolling, dock unlimited icons, dock addon pages, folders scrolling, folders unlimited icons 
 and as of 21-3-2011 , SpringBoard and Dock plugin pages (or WeeApps).
 
+In order for the plugins to work, you need to have latest ScrollingBoard package.
+If you are a developer, you can ask me on IRC to give you a free license.
 
 Note: The SpringBoard and Dock Plugins library (PluginManager) will soon be an independent package and it will not require ScrollingBoard.
 
